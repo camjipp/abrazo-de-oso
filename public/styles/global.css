@@ -696,7 +696,7 @@ body {
 /* Title Overlay */
 .title-overlay {
     position: absolute;
-    top: 48%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
