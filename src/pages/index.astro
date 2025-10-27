@@ -1,14 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout>
-    <Hero />
-    
-    <!-- Quote Section -->
-    <section class="quote-section">
-        <div class="quote-container">
+    <!-- Single Page with Background Image -->
+    <section class="single-page">
+        <div class="hero-image-bg">
+            <img src={`${baseUrl}/images/hero-bear.png`} alt="Abrazo De Oso" />
+        </div>
+        
+        <!-- Quote Overlay -->
+        <div class="quote-overlay">
             <blockquote class="main-quote">
                 "The problem with the world is that we draw the circle of our family too small. 
                 We need to draw it larger every day."
