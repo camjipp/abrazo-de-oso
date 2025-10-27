@@ -811,10 +811,11 @@ body {
         object-position: center center;
     }
     
-    /* Make title bigger on mobile */
+    /* Make title bigger and semi-bold on mobile */
     .main-title {
         font-size: clamp(2.5rem, 10vw, 4rem) !important;
         letter-spacing: 2px;
+        font-weight: 600 !important;
     }
     
     .subtitle {
@@ -824,7 +825,7 @@ body {
     
     /* Move quote higher on mobile */
     .quote-overlay {
-        bottom: 15% !important;
+        bottom: 18% !important;
         padding: 1rem;
     }
     
@@ -832,12 +833,15 @@ body {
         font-size: clamp(1.1rem, 3vw, 1.5rem) !important;
     }
     
-    /* Adjust email on mobile */
+    /* Shrink email on mobile */
     .corner-contact {
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.6rem 1rem;
-        font-size: 0.75rem;
+        bottom: 0.75rem;
+        right: 0.75rem;
+        padding: 0.5rem 0.85rem;
+    }
+    
+    .corner-contact a {
+        font-size: 0.7rem !important;
     }
 
     .nav-links {
