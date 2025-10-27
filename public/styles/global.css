@@ -808,7 +808,7 @@ body {
     
     /* Center bear on mobile */
     .single-page .hero-image-bg img {
-        object-position: center center;
+        object-position: 55% center;
     }
     
     /* Make title bigger and semi-bold on mobile */
