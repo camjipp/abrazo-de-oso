@@ -138,14 +138,13 @@ body {
    =========================== */
 
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     background: var(--primary-dark);
-    padding-top: 80px;
 }
 
 .hero-content {
@@ -173,10 +172,10 @@ body {
 /* Hero with Background Image */
 .hero-with-image .hero-image-bg {
     position: absolute;
-    top: 80px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100%;
     z-index: 1;
     overflow: hidden;
 }
@@ -650,6 +649,85 @@ body {
 .fade-in-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===========================
+   QUOTE SECTION
+   =========================== */
+
+.quote-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-dark);
+    padding: var(--spacing-xl) 2rem;
+}
+
+.quote-container {
+    max-width: 900px;
+    text-align: center;
+}
+
+.main-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.main-quote::before,
+.main-quote::after {
+    content: '"';
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.main-quote::before {
+    top: -2rem;
+    left: -1rem;
+}
+
+.main-quote::after {
+    bottom: -3rem;
+    right: -1rem;
+}
+
+.quote-author {
+    font-size: 1.25rem;
+    color: var(--accent-light);
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   CORNER CONTACT
+   =========================== */
+
+.corner-contact {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.corner-contact a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    opacity: 0.7;
+}
+
+.corner-contact a:hover {
+    color: var(--accent-light);
+    opacity: 1;
 }
 
 /* ===========================
