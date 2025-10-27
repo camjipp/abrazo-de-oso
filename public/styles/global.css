@@ -805,6 +805,40 @@ body {
         --spacing-lg: 4rem;
         --spacing-md: 3rem;
     }
+    
+    /* Center bear on mobile */
+    .single-page .hero-image-bg img {
+        object-position: center center;
+    }
+    
+    /* Make title bigger on mobile */
+    .main-title {
+        font-size: clamp(2.5rem, 10vw, 4rem) !important;
+        letter-spacing: 2px;
+    }
+    
+    .subtitle {
+        font-size: clamp(1rem, 3vw, 1.3rem) !important;
+        letter-spacing: 2px;
+    }
+    
+    /* Move quote higher on mobile */
+    .quote-overlay {
+        bottom: 15% !important;
+        padding: 1rem;
+    }
+    
+    .main-quote {
+        font-size: clamp(1.1rem, 3vw, 1.5rem) !important;
+    }
+    
+    /* Adjust email on mobile */
+    .corner-contact {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+    }
 
     .nav-links {
         position: fixed;
