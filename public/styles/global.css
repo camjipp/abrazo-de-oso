@@ -706,19 +706,19 @@ body {
 
 .main-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--text-primary);
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: var(--accent-light);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
