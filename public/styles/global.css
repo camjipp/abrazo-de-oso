@@ -814,30 +814,33 @@ body {
         letter-spacing: 2px;
     }
     
-    /* Quote box on mobile */
+    /* Quote box on mobile - make it smaller and lower */
     .quote-box {
-        bottom: 1.5rem;
+        bottom: 1rem;
         width: calc(100% - 2rem);
-        padding: 2rem 1.5rem;
-        border-radius: 20px;
+        padding: 1.25rem 1rem;
+        border-radius: 16px;
+        max-width: 90%;
     }
     
     .quote-text {
-        font-size: clamp(1rem, 4vw, 1.4rem);
+        font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
     }
     
     .quote-author {
-        font-size: 0.85rem;
-        margin-bottom: 1.5rem;
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
     }
     
     .contact-info {
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
     }
     
     .contact-info a {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .nav-links {
