@@ -1,0 +1,10 @@
+# robots.txt for Abrazo De Oso Foundation
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://abrazodeoso.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1
+

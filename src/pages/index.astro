@@ -4,29 +4,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout>
     <!-- Single Page with Background Image -->
-    <section class="single-page">
+    <main class="single-page">
         <div class="hero-image-bg">
-            <img src="/images/AbrazoDeOsoNoText.png" alt="Abrazo De Oso" />
+            <img 
+                src="/images/AbrazoDeOsoNoText.png" 
+                alt="Bear embracing cub at sunrise over mountain valley - symbolizing family, faith, and work values of Abrazo De Oso Foundation"
+                loading="eager"
+                fetchpriority="high"
+            />
         </div>
         
         <!-- Main Title Overlay -->
-        <div class="title-overlay">
+        <header class="title-overlay">
             <h1 class="main-title">Abrazo De Oso</h1>
             <p class="subtitle">Faith, Family, and Work</p>
-        </div>
+        </header>
         
         <!-- Quote Box Overlay -->
-        <div class="quote-box">
-            <blockquote class="quote-text">
+        <aside class="quote-box" aria-label="Inspirational quote">
+            <blockquote class="quote-text" cite="Mother Teresa">
                 "The problem with the world is that we draw the circle of our family too small. 
                 We need to draw it larger every day."
             </blockquote>
-            <div class="quote-author">— Mother Teresa</div>
+            <cite class="quote-author">— Mother Teresa</cite>
             
-            <div class="contact-info">
-                <a href="mailto:abrazos@abrazosdeoso.com">abrazos@abrazosdeoso.com</a>
-            </div>
-        </div>
-    </section>
+            <address class="contact-info">
+                <a href="mailto:abrazos@abrazosdeoso.com" aria-label="Contact Abrazo De Oso Foundation via email">abrazos@abrazosdeoso.com</a>
+            </address>
+        </aside>
+    </main>
 </BaseLayout>
 

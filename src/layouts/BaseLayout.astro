@@ -2,12 +2,19 @@
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
 }
 
 const { 
   title = "Abrazo De Oso Foundation | Family, Faith, and Work",
-  description = "Family, Faith, and Work - the foundation of a life well-lived. Abrazo De Oso provides support, protection, and empowerment to those in need through the warmth of community."
+  description = "Abrazo De Oso helps Latin American families build better and happier lives through education, job training and strong community support. Family, Faith, and Work - the foundation of a life well-lived.",
+  ogImage = "/og-image.png",
+  canonicalUrl = "https://abrazodeoso.com"
 } = Astro.props;
+
+const siteUrl = "https://abrazodeoso.com";
+const fullOgImage = `${siteUrl}${ogImage}`;
 
 ---
 
@@ -17,23 +24,59 @@ const {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content={description}>
+    <meta name="keywords" content="Abrazo De Oso, Latin America, charity, foundation, education, job training, community support, family, faith, work, nonprofit, grants">
+    <meta name="author" content="Abrazo De Oso Foundation">
     <meta name="generator" content={Astro.generator}>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href={canonicalUrl}>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl}>
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
+    <meta property="og:image" content={fullOgImage}>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Abrazo De Oso Foundation">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content={canonicalUrl}>
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={fullOgImage}>
     
     <title>{title}</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Abrazo De Oso Foundation",
+      "alternateName": "Abrazo De Oso",
+      "url": siteUrl,
+      "logo": `${siteUrl}/favicon.png`,
+      "description": description,
+      "email": "abrazos@abrazosdeoso.com",
+      "foundingDate": "2024",
+      "sameAs": [],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Latin America"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Latin America"
+      },
+      "knowsAbout": ["Education", "Job Training", "Community Support", "Family Services", "Faith-Based Services"],
+      "slogan": "Family, Faith, and Work"
+    })} />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
